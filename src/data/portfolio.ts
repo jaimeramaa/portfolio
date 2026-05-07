@@ -1,53 +1,52 @@
 // Centralized portfolio content for easy edits
 
 export const profile = {
-  name: "Jorge Sobrino Fernández-Miranda",
-  role: "MEng Maths & CS @ Imperial",
-  tagline: "Mathematics & Computer Engineering student at Imperial College London with a strong foundation in software engineering. Experience building data pipelines, APIs, and user-focused tools, and eager to apply these skills in impactful SWE roles.",
+  name: "Jaime Rama Fernández",
+  role: "MEng Electrical & Electronic Engineering @ Imperial",
+  tagline: "Third-year Engineering student at Imperial College London with a First Class Honours grade, combining rigorous technical training in signal processing and machine learning with hands-on financial experience in M&A, valuation, and algorithmic trading.",
   location: "London, UK",
   links: {
-    github: "https://github.com/yourhandle",
-    linkedin: "https://www.linkedin.com/in/jorge-sobrino/",
-    email: "mailto:jsobrinofm@gmail.com",
+    github: "https://github.com/jaimerama",
+    linkedin: "https://www.linkedin.com/in/jaimerama/",
+    email: "mailto:jaimeramaf@gmail.com",
   },
 };
 
-import thoughtMachineLogo from "@/assets/thought-machine-logo.png";
-import bitcodeLogo from "@/assets/bitcode-logo.png";
-import imperialLogo from "@/assets/imperial-logo.png";
-import googleLogo from "@/assets/google-logo.png";
-import profilePhoto from "@/assets/foto-jorge.jfif";
-import projectStudy from "@/assets/project-study-planner.jpg";
-import projectBanking from "@/assets/project-mobile-banking.jpg";
-import projectChat from "@/assets/project-realtime-chat.jpg";
-import projectOpenWebUI from "@/assets/open-webui-home.png";
-import projectReRoute from "@/assets/reroute.png";
-import projectOsstrack from "@/assets/osstrack.png";
+import profilePhoto from "@/assets/IMG_8641.jpg";
+import deutscheLogo from "@/assets/deutsche.png";
+import ibmLogo from "@/assets/IBM.jpg";
+import lseLogo from "@/assets/LSE.png";
+import tescoDcf from "@/assets/tesco_dcf.png";
+import lseproject from "@/assets/LSE_project.png";
+import ghost from "@/assets/ghost.png";
+import tesc from "@/assets/TESCO_PROJ.png";
+import collage from "@/assets/collage.png";
+import optiv from "@/assets/optiverlogo.png";
+import salvos from "@/assets/salvos.jpeg";
+import IMP from "@/assets/imperial-logo.png";
+import SMM from "@/assets/SMM.png";
 
 export const profileImage = profilePhoto;
 
 export const experience = [
   {
-    company: "Thought Machine",
-    role: "Software Engineering Intern",
-    period: "Jul 2025 – Sep 2025",
-    logo: thoughtMachineLogo,
+    company: "Salvos Technologies",
+    role: "Control Team Lead",
+    period: "Sep 2024 – March 2026",
+    logo: salvos,
     points: [
-      "Developing an end-to-end data pipeline: consumed Kafka event streams, indexed Vault data in ElasticSearch, and exposed low-latency query endpoints over gRPC.",
-      "Enabling flexible data search of 250M+ bank accounts.",
-      "Designing and deploying a new API ensuring compatibility with the high-performance production systems.",
+      "Led weekly project milestones across interdependent workstreams, achieving a 95% on-time delivery rate.",
+      "Designed fail-safe strategies to mitigate critical safety risks and negotiated resources with senior leadership.",
     ],
   },
   {
-    company: "Bitcode Technology SL",
-    role: "Software Engineering Intern",
-    period: "Dec 2024 – Jan 2025",
-    logo: bitcodeLogo,
+    company: "Optiver",
+    role: "Algorithmic Trading Programme Trainee",
+    period: "May 2025 – Jun 2025",
+    logo: optiv,
     points: [
-      "Built a C# payroll automation tool reducing processing time by 95%.",
-      "Migrated backend from SQL Server to SQLite for lightweight deployment.",
-      "Implemented encrypted payroll distribution and tested key logic components.",
-      "Researched licensing strategies for SME rollout.",
+      "Tested options pricing, arbitrage, and market-making strategies in a simulated trading environment.",
+      "Evaluated liquidity dynamics, pricing efficiency, and execution timing to refine trading decisions.",
     ],
   },
 ];
@@ -65,113 +64,118 @@ export interface ProjectItem {
 
 export const projects: ProjectItem[] = [
   {
-    title: "DSL AI — Natural Language Interface for building Financial Products",
-    blurb: "LLM-driven tooling for designing financial products in natural language.",
-    repoUrl: "https://github.com/j-sobrino/dsl-ai",
-    image: projectStudy,
+    title: "S&P 500 Market-Cap Predictor",
+    blurb: "Regression model predicting market capitalisation from financial ratios.",
+    image: lseproject,
     details:
-      "Prototyping an AI-powered platform that converts structured English into DSL code for financial product configuration. Targeting faster iteration, documentation, and testing.",
-    stack: ["LLMs", "Prompt Engineering", "NLP", "Software Design"],
+      "Built a market-cap prediction model using 15 financial ratios across S&P 500 companies, achieving R² ≈ 0.76. Segmented firms by risk-return profile using PCA and K-means to support the application of public market comparables to private company valuation.",
+    stack: ["Python", "Machine Learning", "PCA", "K-means", "Financial Analysis"],
   },
   {
-    title: "Local LLM Infrastructure",
-    blurb: "Self-hosted language model infrastructure for local inference and deployment.",
-    repoUrl: "https://github.com/j-sobrino/local-llm",
-    image: projectOpenWebUI,
+    title: "Low-Latency Edge AI on Raspberry Pi",
+    blurb: "Building a local voice-based AI assistant on Raspberry Pi using IBM Granite.",
+    image: ghost,
     details:
-    "Part of my early journey into LLM infrastructure — understanding deployment, serving, and integration. Built a self-hosted language model stack with Ollama (Docker-based, GPU-enabled), exposing it via HTTP API and connecting to frontends like OpenWebUI and Langflow. Features include model selection, wake-on-LAN server activation, local network API exposure, and optional cloud deployment using RunPod. Focused on learning end-to-end flow, API processing, backend hosting alternatives to OpenAI, and gaining practical skills in GPU setup and deployment.",
-    stack: ["Ollama", "Docker", "LLMs", "GPU", "API"],
+      "This project focuses on deploying an IBM Granite LLM on Raspberry Pi to deliver fully local inference in a resource-constrained environment. It examines the trade-offs between latency, hardware limitations and usability, while integrating voice-based interaction and anomaly-detection features into a portable privacy-first prototype.",
+    stack: ["IBM Granite", "Raspberry Pi", "Edge AI", "Python", "Voice Interfaces"],
   },
   {
-    title: "ReRoute — Health-First Navigation App",
-    blurb: "Award-winning app promoting walkable commutes.",
-    repoUrl: "https://gitlab.doc.ic.ac.uk/pp1523/drping",
-    websiteUrl: "https://pp1523.pages.doc.ic.ac.uk/drping/",
-    image: projectReRoute,
+    title: "Tesco DCF Valuation Model",
+    blurb: "Full discounted cash flow model with sensitivity analysis.",
+    image: tesc,
     details:
-      "Led UI/UX design for ReRoute, a health-focused navigation app to combat rising prediabetes rates. Conducted 50+ user interviews in London to inform design decisions. Applied user-centered design principles with rapid iteration, thin slicing, and prototyping. Won the Amadeus Prize for Best Project and selected by Amazon for mentorship.",
-    stack: ["React Native", "User Research", "User-Centered Design", "Prototyping"],
-    award: "1st Place - Imperial 2nd Year Project + Amadeus Prize",
+      "Built a full DCF model on Tesco as part of an Imperial College Corporate Finance project. Forecasted key operating drivers, estimated beta and WACC, valued the business using GGM and exit multiples, and conducted sensitivity analysis on core assumptions.",
+    stack: ["Excel", "DCF", "WACC", "Financial Modelling", "Sensitivity Analysis"],
   },
   {
-    title: "Osstrack — Bone Health with Ultrasound AI",
-    blurb: "Hackathon-winning tool to assess osteoporosis risk using ultrasound and ML.",
-    websiteUrl: "https://osstrackhealth.com",
-    image: projectOsstrack,
+    title: "ECG & Adaptive Filtering",
+    blurb: "Signal processing projects in ECG analysis and LMS filtering.",
+    image: collage,
     details:
-      "Built a deep-learning diagnostic interface using ultrasound images to assess bone density. Won Longevity x AI hackathon. Designed UI with Cursor AI and Lovable.",
-    stack: ["Deep Learning", "Python", "Cursor AI", "Lovable", "UX Design"],
-    award: "1st Place - Longevity x AI Hackathon",
+      "Projects in ECG signal processing, Wiener filtering, LMS adaptive filtering variants including gear-shifting and sign-based approaches, AR process identification, and speech signal analysis. Implemented in MATLAB as part of Advanced Signal Processing coursework.",
+    stack: ["MATLAB", "Signal Processing", "ECG", "AR Models"],
   },
 ];
 
 export const education = [
   {
     school: "Imperial College London",
-    degree: "MEng Mathematics and Computer Science",
+    degree: "MEng Electrical & Electronic Engineering with Management",
     period: "2023 – 2027",
-    notes: "First Class Honours. Modules: Graphs & Algorithms, SWE Design, Symbolic Reasoning, Operating Systems, AI, and more.",
-    logo: imperialLogo,
+    notes: "First Class Honours, 74%. Modules: Machine Learning, Deep Learning, Statistical Signal Processing, Control Systems, Communication Networks, Power Electronics, Corporate Finance, Accounting.",
+    logo: IMP,
   },
   {
-    school: "Google",
-    degree: "Machine Learning Course",
-    period: "2024",
-    notes: "Completed to learn the mathematical foundations and theoretical background behind large language models.",
-    logo: googleLogo,
-    link: "https://developers.google.com/machine-learning/crash-course",
+    school: "Santa María del Mar",
+    degree: "Secondary Education",
+    period: "Graduated 2023",
+    notes: "Final grade: 9.55/10. Class President, Physics Olympiad team, UNESCO project leader.",
+    logo: SMM,
   },
-
 ];
 
 export const languages = [
-  { name: "Spanish", level: "Native", flag: "🇪🇸", countryCode: "es" },
-  { name: "English", level: "Native (C2 - Grade A)", flag: "🇬🇧", countryCode: "gb" },
-  { name: "French", level: "Bilingual", flag: "🇫🇷", countryCode: "fr" },
-  { name: "Chinese", level: "Basic (HSK2)", flag: "🇨🇳", countryCode: "cn" },
+  { name: "Spanish & Galician", level: "Native", flag: "🇪🇸", countryCode: "es" },
+  { name: "English", level: "Bilingual", flag: "🇬🇧", countryCode: "gb" },
+  { name: "French", level: "Advanced", flag: "🇫🇷", countryCode: "fr" },
+  { name: "Portuguese", level: "Intermediate", flag: "🇵🇹", countryCode: "pt" },
 ];
 
 export const techSkills = {
-  languages: ["Python", "Go", "Java", "Kotlin", "C#", "C", "Scala", "JavaScript", "Haskell"],
-  tools: ["Git", "CI/CD", "Kubernetes", "Kafka", "ElasticSearch", "Docker", "gRPC", "SQLite"],
-  web: ["HTML", "CSS", "JavaScript", "Cursor AI", "Lovable"],
+  languages: ["Python", "MATLAB", "C++", "Excel", "PowerPoint"],
+  tools: ["DCF Modelling", "WACC", "Beta Estimation", "Comparable Company Analysis", "Capital Structure"],
+  web: ["Machine Learning", "Signal Processing", "Deep Learning", "Edge AI"],
 };
 
-export const awards = [
+
+export interface AwardItem {
+  title: string;
+  org: string;
+  date: string;
+  details: string;
+  image?: string;
+}
+
+export const awards: AwardItem[] = [
   {
-    title: "1st Place, Imperial 2nd Year Project Competition",
+    title: "Deutsche Bank M&A Case Study Workshop",
+    org: "Deutsche Bank",
+    date: "Oct 2025",
+    details: "Selected participant. Analysed 5 acquisition targets for a £10bn EV client. Built mock financing structure for a £4.4bn transaction.",
+    image: deutscheLogo,
+  },
+  {
+    title: "Applied Machine Learning",
+    org: "London School of Economics",
+    date: "Jul 2025",
+    details: "Built market-cap prediction model (R² ≈ 0.76) and applied PCA/K-means for firm segmentation.",
+    image: lseLogo,
+  },
+  {
+    title: "Corporate Finance Valuation Project",
     org: "Imperial College London",
-    date: "May 2025",
-    details: "Won Amadeus Prize for 'ReRoute'. Selected by Amazon for mentorship.",
+    date: "Feb 2026",
+    details: "Full DCF model on Tesco with GGM, exit multiples, WACC estimation, and sensitivity analysis.",
+    image: tescoDcf,
   },
   {
-    title: "1st Place, Longevity x AI Hackathon",
-    org: "Longevity & AI",
-    date: "May 2025",
-    details: "Built Osstrack. £2K cash prize + £5K cloud credits.",
-  },
-  {
-    title: "Silver Medal, Spanish Math Olympiad Regionals",
-    org: "RSME",
-    date: "June 2023",
-    details: "Top ranking in problem-solving (algebra, combinatorics, geometry).",
+    title: "IBM Consultancy Project",
+    org: "IBM",
+    date: "Apr – Jun 2026",
+    details: "Developing a practical edge-AI concept using Granite LLM as part of an IBM consultancy project. Assessing use cases and shaping a low-cost prototype focused on privacy, accessibility and local deployment.",
+    image: ibmLogo,
   },
 ];
 
 export const volunteering = [
   {
-    title: "President, Imperial Spanish Society",
-    period: "2025 – 2026",
-    details: "Leading a 200+ member society. Coordinating events, sponsorships, and engagement.",
+    title: "Sponsorship Officer — Imperial College London Basketball",
+    period: "May 2024 – Sep 2025",
+    details: "Negotiated sponsorships for the university basketball club, supporting team funding and operations.",
   },
   {
-    title: "Volunteering in Chame, Panama (ONGVoluntariado)",
-    period: "Aug – Sep 2024",
-    details: "Led PE workshops. Tutored children with learning difficulties.",
-  },
-  {
-    title: "Red Cross Madrid",
-    period: "2020 – 2024",
-    details: "Led youth education workshops. Contributed to flood relief and aid campaigns.",
+    title: "Volunteer Educator — Entreculturas",
+    period: "Oct 2022 – Jun 2023",
+    details: "Delivered after-school lessons for underprivileged children, adapting material to different learning needs.",
   },
 ];

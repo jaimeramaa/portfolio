@@ -85,6 +85,29 @@ const Index = () => {
           </div>
         </section>
 
+        <section id="awards" className="container mx-auto px-4 py-12">
+          <h2 className="text-2xl font-semibold tracking-tight">Professional Development</h2>
+          <div className="mt-6 grid gap-6 md:grid-cols-2">
+            {awards.map((award) => (
+              <article key={award.title} className="rounded-lg border border-border bg-card/50 p-5 hover-lift">
+                <div className="flex items-start gap-4">
+                  {award.image && (
+                    <img src={award.image} alt={award.title} className="h-12 w-12 object-contain flex-shrink-0" />
+                  )}
+                  <div className="flex-1">
+                    <div className="flex items-start justify-between">
+                      <h3 className="text-lg font-semibold">{award.title}</h3>
+                      <span className="text-xs text-muted-foreground">{award.date}</span>
+                    </div>
+                    <p className="mt-1 text-sm text-muted-foreground">{award.org}</p>
+                    <p className="mt-2 text-sm text-muted-foreground">{award.details}</p>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
         <section id="projects" className="container mx-auto px-4 py-12">
           <h2 className="text-2xl font-semibold tracking-tight">Projects</h2>
           <p className="mt-1 text-sm text-muted-foreground">An appealing glance — click to learn more and view code.</p>
@@ -158,24 +181,6 @@ const Index = () => {
                 ))}
               </div>
             </div>
-          </div>
-        </section>
-
-        <section id="awards" className="container mx-auto px-4 py-12">
-          <h2 className="text-2xl font-semibold tracking-tight">Awards & Recognition</h2>
-          <div className="mt-6 grid gap-6 md:grid-cols-2">
-            {awards.map((award) => (
-              <article key={award.title} className="rounded-lg border border-border bg-card/50 p-5 hover-lift">
-                <div className="flex items-start justify-between">
-                  <div className="flex-1">
-                    <h3 className="text-lg font-semibold">{award.title}</h3>
-                    <p className="mt-1 text-sm text-muted-foreground">{award.org}</p>
-                    <p className="mt-2 text-sm text-muted-foreground">{award.details}</p>
-                  </div>
-                  <span className="text-xs text-muted-foreground">{award.date}</span>
-                </div>
-              </article>
-            ))}
           </div>
         </section>
 
